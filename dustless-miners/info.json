@@ -1,0 +1,11 @@
+{
+	"name": "dustless-miners",
+	"version": "0.1.1",
+	"title": "Dustless Miners",
+	"description": "This mod features five extra tiers of electric miners which reduce the amount of pollution being produced.
+
+This mod also has customization for the mining speed, power usage, pollution and health of each tier miner for the people who like altering and messing up the game (that being me :D)",
+	"author": "MarcaGames",
+	"factorio_version": "1.0",
+	"dependencies": []
+}

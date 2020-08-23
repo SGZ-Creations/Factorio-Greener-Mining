@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2020.08.23
+  Changes:
+    - Forgot to add a mod description so I added it :)
+    - Added changelog since why begin with it on the first version
+    - Changed item sort values from "a[items]-b[t1-dustless-electric-mining-drill]" to "a[items]-c[dustless-electric-mining-drill-t1]" to make sure the new miners come after the vanilla mining drill
+  Bugfixes:
+    - Fixed a bug with reskins-bobs (Artisanal Reskins: Bob's Mods) trying to use edited versions of a vanilla functions
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2020.08.23
+  Features:
+    - Added a tier 1 dustless mining drill which has 400 health, mining speed of 0.6/s, power usage of 130kW, pollution per minute of 4
+    - Added a tier 2 dustless mining drill which has 550 health, mining speed of 1.2/s, power usage of 180kW, pollution per minute of 2
+    - Added a tier 3 dustless mining drill which has 750 health, mining speed of 2.0/s, power usage of 260kW, pollution per minute of 0
+    - Added a tier 4 dustless mining drill which has 1000 health, mining speed of 4.0/s, power usage of 430kW, pollution per minute of 0
+    - Added a tier 5 dustless mining drill which has 1400 health, mining speed of 8.0/s, power usage of 670kW, pollution per minute of 0
+---------------------------------------------------------------------------------------------------

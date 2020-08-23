@@ -6,7 +6,7 @@ data:extend({
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "extraction-machine",
-		order = "a[items]-b[t1-dustless-electric-mining-drill]",
+		order = "a[items]-c[dustless-electric-mining-drill-t1]",
 		place_result = "dustless-electric-mining-drill-t1",
 		stack_size = 50
 	},
@@ -17,7 +17,7 @@ data:extend({
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "extraction-machine",
-		order = "a[items]-b[t2-dustless-electric-mining-drill]",
+		order = "a[items]-c[dustless-electric-mining-drill-t2]",
 		place_result = "dustless-electric-mining-drill-t2",
 		stack_size = 50
 	},
@@ -28,7 +28,7 @@ data:extend({
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "extraction-machine",
-		order = "a[items]-b[t3-dustless-electric-mining-drill]",
+		order = "a[items]-c[dustless-electric-mining-drill-t3]",
 		place_result = "dustless-electric-mining-drill-t3",
 		stack_size = 50
 	},
@@ -39,7 +39,7 @@ data:extend({
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "extraction-machine",
-		order = "a[items]-b[t4-dustless-electric-mining-drill]",
+		order = "a[items]-c[dustless-electric-mining-drill-t4]",
 		place_result = "dustless-electric-mining-drill-t4",
 		stack_size = 50
 	},
@@ -50,7 +50,7 @@ data:extend({
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "extraction-machine",
-		order = "a[items]-b[t5-dustless-electric-mining-drill]",
+		order = "a[items]-c[dustless-electric-mining-drill-t5]",
 		place_result = "dustless-electric-mining-drill-t5",
 		stack_size = 50
 	}

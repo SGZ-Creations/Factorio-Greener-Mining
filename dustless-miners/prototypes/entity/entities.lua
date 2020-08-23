@@ -4,8 +4,8 @@ require ("prototypes.entity.assemblerpipes")
 local hit_effects = require ("prototypes.entity.demo-hit-effects")
 local sounds = require("prototypes.entity.demo-sounds")
 
-electric_drill_animation_speed = 0.4
-electric_drill_animation_sequence =
+dustless_electric_drill_animation_speed = 0.4
+dustless_electric_drill_animation_sequence =
 {
   1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
@@ -26,7 +26,7 @@ electric_drill_animation_sequence =
   21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
 }
 
-electric_drill_animation_shadow_sequence =
+dustless_electric_drill_animation_shadow_sequence =
 {
   1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
@@ -47,7 +47,7 @@ electric_drill_animation_shadow_sequence =
   21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
 }
 
-function electric_mining_drill_smoke(name)
+function dustless_electric_mining_drill_smoke(name)
   return
   {
     priority = "high",
@@ -56,7 +56,7 @@ function electric_mining_drill_smoke(name)
     width = 24,
     height = 38,
     frame_count = 30,
-    animation_speed = electric_drill_animation_speed,
+    animation_speed = dustless_electric_drill_animation_speed,
     direction_count = 1,
     shift = util.by_pixel(0, 2),
     hr_version =
@@ -67,7 +67,7 @@ function electric_mining_drill_smoke(name)
       width = 48,
       height = 72,
       frame_count = 30,
-      animation_speed = electric_drill_animation_speed,
+      animation_speed = dustless_electric_drill_animation_speed,
       direction_count = 1,
       shift = util.by_pixel(0, 3),
       scale = 0.5,
@@ -75,7 +75,7 @@ function electric_mining_drill_smoke(name)
   }
 end
 
-function electric_mining_drill_smoke_front(name)
+function dustless_electric_mining_drill_smoke_front(name)
   return
   {
     priority = "high",
@@ -84,7 +84,7 @@ function electric_mining_drill_smoke_front(name)
     width = 76,
     height = 68,
     frame_count = 30,
-    animation_speed = electric_drill_animation_speed,
+    animation_speed = dustless_electric_drill_animation_speed,
     direction_count = 1,
     shift = util.by_pixel(-4, 8),
     hr_version =
@@ -95,7 +95,7 @@ function electric_mining_drill_smoke_front(name)
       width = 148,
       height = 132,
       frame_count = 30,
-      animation_speed = electric_drill_animation_speed,
+      animation_speed = dustless_electric_drill_animation_speed,
       direction_count = 1,
       shift = util.by_pixel(-3, 9),
       scale = 0.5,
@@ -103,7 +103,7 @@ function electric_mining_drill_smoke_front(name)
   }
 end
 
-function electric_mining_drill_animation(name)
+function dustless_electric_mining_drill_animation(name)
   return
   {
     priority = "high",
@@ -112,8 +112,8 @@ function electric_mining_drill_animation(name)
     width = 84,
     height = 80,
     frame_count = 30,
-    animation_speed = electric_drill_animation_speed,
-    frame_sequence = electric_drill_animation_sequence,
+    animation_speed = dustless_electric_drill_animation_speed,
+    frame_sequence = dustless_electric_drill_animation_sequence,
     direction_count = 1,
     shift = util.by_pixel(0, -12),
     hr_version =
@@ -124,8 +124,8 @@ function electric_mining_drill_animation(name)
       width = 162,
       height = 156,
       frame_count = 30,
-      animation_speed = electric_drill_animation_speed,
-      frame_sequence = electric_drill_animation_sequence,
+      animation_speed = dustless_electric_drill_animation_speed,
+      frame_sequence = dustless_electric_drill_animation_sequence,
       direction_count = 1,
       shift = util.by_pixel(1, -11),
       scale = 0.5,
@@ -133,7 +133,7 @@ function electric_mining_drill_animation(name)
   }
 end
 
-function electric_mining_drill_shadow_animation(name)
+function dustless_electric_mining_drill_shadow_animation(name)
   return
   {
     priority = "high",
@@ -142,8 +142,8 @@ function electric_mining_drill_shadow_animation(name)
     width = 112,
     height = 26,
     frame_count = 21,
-    animation_speed = electric_drill_animation_speed,
-    frame_sequence = electric_drill_animation_shadow_sequence,
+    animation_speed = dustless_electric_drill_animation_speed,
+    frame_sequence = dustless_electric_drill_animation_shadow_sequence,
     draw_as_shadow = true,
     shift = util.by_pixel(20, 6),
     hr_version =
@@ -154,8 +154,8 @@ function electric_mining_drill_shadow_animation(name)
       width = 218,
       height = 56,
       frame_count = 21,
-      animation_speed = electric_drill_animation_speed,
-      frame_sequence = electric_drill_animation_shadow_sequence,
+      animation_speed = dustless_electric_drill_animation_speed,
+      frame_sequence = dustless_electric_drill_animation_shadow_sequence,
       draw_as_shadow = true,
       shift = util.by_pixel(21, 5),
       scale = 0.5,
@@ -163,7 +163,7 @@ function electric_mining_drill_shadow_animation(name)
   }
 end
 
-function electric_mining_drill_horizontal_animation(name)
+function dustless_electric_mining_drill_horizontal_animation(name)
   return
   {
     priority = "high",
@@ -172,8 +172,8 @@ function electric_mining_drill_horizontal_animation(name)
     width = 40,
     height = 80,
     frame_count = 30,
-    animation_speed = electric_drill_animation_speed,
-    frame_sequence = electric_drill_animation_sequence,
+    animation_speed = dustless_electric_drill_animation_speed,
+    frame_sequence = dustless_electric_drill_animation_sequence,
     direction_count = 1,
     shift = util.by_pixel(2, -12),
     hr_version =
@@ -184,8 +184,8 @@ function electric_mining_drill_horizontal_animation(name)
       width = 80,
       height = 160,
       frame_count = 30,
-      animation_speed = electric_drill_animation_speed,
-      frame_sequence = electric_drill_animation_sequence,
+      animation_speed = dustless_electric_drill_animation_speed,
+      frame_sequence = dustless_electric_drill_animation_sequence,
       direction_count = 1,
       shift = util.by_pixel(2, -12),
       scale = 0.5,
@@ -193,7 +193,7 @@ function electric_mining_drill_horizontal_animation(name)
   }
 end
 
-function electric_mining_drill_horizontal_front_animation(name)
+function dustless_electric_mining_drill_horizontal_front_animation(name)
   return
   {
     priority = "high",
@@ -202,8 +202,8 @@ function electric_mining_drill_horizontal_front_animation(name)
     width = 32,
     height = 76,
     frame_count = 30,
-    animation_speed = electric_drill_animation_speed,
-    frame_sequence = electric_drill_animation_sequence,
+    animation_speed = dustless_electric_drill_animation_speed,
+    frame_sequence = dustless_electric_drill_animation_sequence,
     direction_count = 1,
     shift = util.by_pixel(-2, 4),
     hr_version =
@@ -214,8 +214,8 @@ function electric_mining_drill_horizontal_front_animation(name)
       width = 66,
       height = 154,
       frame_count = 30,
-      animation_speed = electric_drill_animation_speed,
-      frame_sequence = electric_drill_animation_sequence,
+      animation_speed = dustless_electric_drill_animation_speed,
+      frame_sequence = dustless_electric_drill_animation_sequence,
       direction_count = 1,
       shift = util.by_pixel(-3, 3),
       scale = 0.5,
@@ -223,7 +223,7 @@ function electric_mining_drill_horizontal_front_animation(name)
   }
 end
 
-function electric_mining_drill_horizontal_shadow_animation(name)
+function dustless_electric_mining_drill_horizontal_shadow_animation(name)
   return
   {
     priority = "high",
@@ -232,8 +232,8 @@ function electric_mining_drill_horizontal_shadow_animation(name)
     width = 92,
     height = 80,
     frame_count = 21,
-    animation_speed = electric_drill_animation_speed,
-    frame_sequence = electric_drill_animation_shadow_sequence,
+    animation_speed = dustless_electric_drill_animation_speed,
+    frame_sequence = dustless_electric_drill_animation_shadow_sequence,
     draw_as_shadow = true,
     shift = util.by_pixel(32, 2),
     hr_version =
@@ -244,8 +244,8 @@ function electric_mining_drill_horizontal_shadow_animation(name)
       width = 180,
       height = 164,
       frame_count = 21,
-      animation_speed = electric_drill_animation_speed,
-      frame_sequence = electric_drill_animation_shadow_sequence,
+      animation_speed = dustless_electric_drill_animation_speed,
+      frame_sequence = dustless_electric_drill_animation_shadow_sequence,
       draw_as_shadow = true,
       shift = util.by_pixel(33, 1),
       scale = 0.5,
@@ -253,7 +253,7 @@ function electric_mining_drill_horizontal_shadow_animation(name)
   }
 end
 
-function electric_mining_drill_status_colors()
+function dustless_electric_mining_drill_status_colors()
   return
   {
     -- If no_power, idle, no_minable_resources, disabled, insufficient_input or full_output is used, always_draw of corresponding layer must be set to true to draw it in those states.
@@ -271,7 +271,7 @@ function electric_mining_drill_status_colors()
   }
 end
 
-function electric_mining_drill_status_leds_working_visualisation(name)
+function dustless_electric_mining_drill_status_leds_working_visualisation(name)
   local led_blend_mode = nil -- "additive"
   local led_tint = {1,1,1,0.5}
   return
@@ -359,7 +359,7 @@ function electric_mining_drill_status_leds_working_visualisation(name)
   }
 end
 
-function electric_mining_drill_add_light_offsets(t)
+function dustless_electric_mining_drill_add_light_offsets(t)
   t.north_position = { 0.8, -1.5}
   t.east_position =  { 1.2, -1}
   t.south_position = { 0.8,  0.8}
@@ -368,13 +368,13 @@ function electric_mining_drill_add_light_offsets(t)
 end
 
 local electric_mining_drill_primary_light =
-  electric_mining_drill_add_light_offsets(
+  dustless_electric_mining_drill_add_light_offsets(
   {
     light = { intensity = 1, size = 3, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
   })
 
 local electric_mining_drill_secondary_light =
-  electric_mining_drill_add_light_offsets(
+  dustless_electric_mining_drill_add_light_offsets(
   {
     always_draw = true,
     apply_tint = "status",
@@ -400,8 +400,8 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
     input_fluid_box = (not data.is_demo) and
     {
       production_type = "input-output",
-      pipe_picture = assembler2pipepictures(),
-      pipe_covers = pipecoverspictures(),
+      pipe_picture = dustless_assembler2pipepictures(),
+      pipe_covers = dustless_pipecoverspictures(),
       base_area = 1,
       height = 2,
       base_level = -1,
@@ -429,12 +429,12 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 
     graphics_set =
     {
-      drilling_vertical_movement_duration = 10 / electric_drill_animation_speed,
+      drilling_vertical_movement_duration = 10 / dustless_electric_drill_animation_speed,
       animation_progress = 1,
       min_animation_progress = 0,
       max_animation_progress = 30,
 
-      status_colors = electric_mining_drill_status_colors(),
+      status_colors = dustless_electric_mining_drill_status_colors(),
 
       circuit_connector_layer = "object",
       circuit_connector_secondary_draw_order = { north = 14, east = 30, south = 30, west = 30 },
@@ -452,7 +452,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 96,
               height = 104,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -4),
               repeat_count = 5,
@@ -464,7 +464,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 190,
                 height = 208,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
@@ -478,7 +478,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 32,
               height = 34,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-4, -44),
               hr_version =
@@ -489,7 +489,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 60,
                 height = 66,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-3, -44),
                 scale = 0.5,
@@ -502,7 +502,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 106,
               height = 104,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(6, -4),
               repeat_count = 5,
@@ -514,7 +514,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 212,
                 height = 204,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(6, -3),
                 repeat_count = 5,
@@ -534,7 +534,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 96,
               height = 94,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -4),
               repeat_count = 5,
@@ -546,7 +546,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 192,
                 height = 188,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
@@ -560,7 +560,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 26,
               height = 38,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(30, -8),
               hr_version =
@@ -571,7 +571,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 50,
                 height = 74,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(30, -8),
                 scale = 0.5,
@@ -584,7 +584,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 112,
               height = 92,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(10, 2),
               repeat_count = 5,
@@ -596,7 +596,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 222,
                 height = 182,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(10, 2),
                 repeat_count = 5,
@@ -616,7 +616,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 92,
               height = 98,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -2),
               repeat_count = 5,
@@ -628,7 +628,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 184,
                 height = 192,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -1),
                 repeat_count = 5,
@@ -642,7 +642,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 106,
               height = 102,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(6, 2),
               repeat_count = 5,
@@ -654,7 +654,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 212,
                 height = 204,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(6, 2),
                 repeat_count = 5,
@@ -674,7 +674,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 96,
               height = 94,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -4),
               repeat_count = 5,
@@ -686,7 +686,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 192,
                 height = 188,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
@@ -700,7 +700,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 24,
               height = 28,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-30, -12),
               hr_version =
@@ -711,7 +711,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 50,
                 height = 60,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-31, -13),
                 scale = 0.5,
@@ -724,7 +724,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 102,
               height = 92,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(-6, 2),
               repeat_count = 5,
@@ -736,7 +736,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 200,
                 height = 182,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(-5, 2),
                 repeat_count = 5,
@@ -760,8 +760,8 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         west = { {0, 0}, {0.4, 0}, {0.1, 0}, {0.5, 0}, {0.75, 0}, {1, 0}, {0.65, 0}, {0.3, 0}, {0.9, 0}, {0.6, 0}, {0.3, 0} },
       },
 
-      shift_animation_waypoint_stop_duration = 195 / electric_drill_animation_speed,
-      shift_animation_transition_duration = 30 / electric_drill_animation_speed,
+      shift_animation_waypoint_stop_duration = 195 / dustless_electric_drill_animation_speed,
+      shift_animation_transition_duration = 30 / dustless_electric_drill_animation_speed,
 
       working_visualisations =
       {
@@ -771,7 +771,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 --          synced_fadeout = true,
 --          align_to_waypoint = true,
 --          apply_tint = "resource-color",
---          animation = electric_mining_drill_smoke(name),
+--          animation = dustless_electric_mining_drill_smoke(name),
 --          north_position = { 0, 0.25 },
 --          east_position = { 0, 0 },
 --          south_position = { 0, 0.25 },
@@ -794,7 +794,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 30,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -44),
                 hr_version =
@@ -805,7 +805,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 42,
                   height = 58,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-1, -44),
                   scale = 0.5,
@@ -826,32 +826,32 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           {
             layers =
             {
-              electric_mining_drill_animation(name),
-              electric_mining_drill_shadow_animation(name)
+              dustless_electric_mining_drill_animation(name),
+              dustless_electric_mining_drill_shadow_animation(name)
             }
           },
           east_animation =
           {
             layers =
             {
-              electric_mining_drill_horizontal_animation(name),
-              electric_mining_drill_horizontal_shadow_animation(name)
+              dustless_electric_mining_drill_horizontal_animation(name),
+              dustless_electric_mining_drill_horizontal_shadow_animation(name)
             }
           },
           south_animation =
           {
             layers =
             {
-              electric_mining_drill_animation(name),
-              electric_mining_drill_shadow_animation(name)
+              dustless_electric_mining_drill_animation(name),
+              dustless_electric_mining_drill_shadow_animation(name)
             }
           },
           west_animation =
           {
             layers =
             {
-              electric_mining_drill_horizontal_animation(name),
-              electric_mining_drill_horizontal_shadow_animation(name)
+              dustless_electric_mining_drill_horizontal_animation(name),
+              dustless_electric_mining_drill_horizontal_shadow_animation(name)
             }
           },
         },
@@ -862,7 +862,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 --          synced_fadeout = true,
 --          align_to_waypoint = true,
 --          apply_tint = "resource-color",
---          animation = electric_mining_drill_smoke_front(name),
+--          animation = dustless_electric_mining_drill_smoke_front(name),
 --          north_position = { 0, 0.25 },
 --          east_position = { 0, 0 },
 --          south_position = { 0, 0.25 },
@@ -886,7 +886,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 28,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(24, -12),
                 hr_version =
@@ -897,7 +897,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 46,
                   height = 56,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(24, -12),
                   scale = 0.5,
@@ -916,7 +916,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 18,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, 20),
                 hr_version =
@@ -927,7 +927,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 48,
                   height = 36,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-2, 20),
                   scale = 0.5,
@@ -946,7 +946,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 26,
                 height = 30,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-26, -12),
                 hr_version =
@@ -957,7 +957,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 46,
                   height = 54,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-25, -11),
                   scale = 0.5,
@@ -972,9 +972,9 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           animated_shift = true,
           always_draw = true,
           --north_animation = util.empty_sprite(),
-          east_animation = electric_mining_drill_horizontal_front_animation(name),
+          east_animation = dustless_electric_mining_drill_horizontal_front_animation(name),
           --south_animation = util.empty_sprite(),
-          west_animation = electric_mining_drill_horizontal_front_animation(name),
+          west_animation = dustless_electric_mining_drill_horizontal_front_animation(name),
         },
 
         -- front frame
@@ -989,7 +989,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
             width = 66,
             height = 74,
             frame_count = 1,
-            animation_speed = electric_drill_animation_speed,
+            animation_speed = dustless_electric_drill_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(22, 10),
             hr_version =
@@ -1000,7 +1000,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 136,
               height = 148,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(21, 10),
               scale = 0.5,
@@ -1017,7 +1017,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 44,
                 height = 28,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 shift = util.by_pixel(-2, 34),
                 hr_version =
                 {
@@ -1027,7 +1027,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 84,
                   height = 56,
                   frame_count = 5,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   shift = util.by_pixel(-1, 34),
                   scale = 0.5,
                 }
@@ -1039,7 +1039,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 96,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 repeat_count = 5,
                 shift = util.by_pixel(0, 26),
                 hr_version =
@@ -1050,7 +1050,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 190,
                   height = 104,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   repeat_count = 5,
                   shift = util.by_pixel(0, 27),
                   scale = 0.5,
@@ -1066,7 +1066,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
             width = 68,
             height = 70,
             frame_count = 1,
-            animation_speed = electric_drill_animation_speed,
+            animation_speed = dustless_electric_drill_animation_speed,
             direction_count = 1,
             shift = util.by_pixel(-22, 12),
             hr_version =
@@ -1077,7 +1077,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 134,
               height = 140,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-22, 12),
               scale = 0.5,
@@ -1086,7 +1086,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         },
 
         -- LEDs
-        electric_mining_drill_status_leds_working_visualisation(name),
+        dustless_electric_mining_drill_status_leds_working_visualisation(name),
 
         -- light
         electric_mining_drill_primary_light,
@@ -1096,12 +1096,12 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 
     wet_mining_graphics_set =
     {
-      drilling_vertical_movement_duration = 10 / electric_drill_animation_speed,
+      drilling_vertical_movement_duration = 10 / dustless_electric_drill_animation_speed,
       animation_progress = 1,
       min_animation_progress = 0,
       max_animation_progress = 30,
 
-      status_colors = electric_mining_drill_status_colors(),
+      status_colors = dustless_electric_mining_drill_status_colors(),
 
       circuit_connector_layer = "object",
       circuit_connector_secondary_draw_order = { north = 14, east = 48, south = 48, west = 48 },
@@ -1119,7 +1119,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 96,
               height = 100,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -8),
               repeat_count = 5,
@@ -1131,7 +1131,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 190,
                 height = 198,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -7),
                 repeat_count = 5,
@@ -1145,7 +1145,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 32,
               height = 34,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-4, -44),
               hr_version =
@@ -1156,7 +1156,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 60,
                 height = 66,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-3, -44),
                 scale = 0.5,
@@ -1169,7 +1169,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 124,
               height = 110,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(12, 2),
               repeat_count = 5,
@@ -1181,7 +1181,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 248,
                 height = 222,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(12, 1),
                 repeat_count = 5,
@@ -1201,7 +1201,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 96,
               height = 106,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(2, -10),
               repeat_count = 5,
@@ -1213,7 +1213,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 194,
                 height = 208,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(1, -9),
                 repeat_count = 5,
@@ -1227,7 +1227,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 24,
               height = 28,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-30, -12),
               hr_version =
@@ -1238,7 +1238,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 50,
                 height = 60,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-31, -13),
                 scale = 0.5,
@@ -1251,7 +1251,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 132,
               height = 102,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(8, 6),
               repeat_count = 5,
@@ -1263,7 +1263,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 260,
                 height = 202,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(9, 6),
                 repeat_count = 5,
@@ -1283,7 +1283,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 98,
               height = 106,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(0, -6),
               repeat_count = 5,
@@ -1295,7 +1295,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 192,
                 height = 208,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(1, -5),
                 repeat_count = 5,
@@ -1309,7 +1309,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 124,
               height = 98,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(12, 4),
               repeat_count = 5,
@@ -1321,7 +1321,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 248,
                 height = 192,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(12, 5),
                 repeat_count = 5,
@@ -1341,7 +1341,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 98,
               height = 106,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(-2, -10),
               repeat_count = 5,
@@ -1353,7 +1353,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 194,
                 height = 208,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -9),
                 repeat_count = 5,
@@ -1367,7 +1367,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 26,
               height = 38,
               frame_count = 5,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               direction_count = 1,
               shift = util.by_pixel(30, -8),
               hr_version =
@@ -1378,7 +1378,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 50,
                 height = 74,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(30, -8),
                 scale = 0.5,
@@ -1391,7 +1391,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
               width = 112,
               height = 100,
               frame_count = 1,
-              animation_speed = electric_drill_animation_speed,
+              animation_speed = dustless_electric_drill_animation_speed,
               draw_as_shadow = true,
               shift = util.by_pixel(10, 6),
               repeat_count = 5,
@@ -1403,7 +1403,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 226,
                 height = 202,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 draw_as_shadow = true,
                 shift = util.by_pixel(9, 5),
                 repeat_count = 5,
@@ -1427,8 +1427,8 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         west = { {0, 0}, {0.3, 0}, {0, 0}, {0.25, 0} },
       },
 
-      shift_animation_waypoint_stop_duration = 195 / electric_drill_animation_speed,
-      shift_animation_transition_duration = 30 / electric_drill_animation_speed,
+      shift_animation_waypoint_stop_duration = 195 / dustless_electric_drill_animation_speed,
+      shift_animation_transition_duration = 30 / dustless_electric_drill_animation_speed,
 
       working_visualisations =
       {
@@ -1438,7 +1438,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 --          synced_fadeout = true,
 --          align_to_waypoint = true,
 --          apply_tint = "resource-color",
---          animation = electric_mining_drill_smoke(name),
+--          animation = dustless_electric_mining_drill_smoke(name),
 --          north_position = { 0, 0.25 },
 --          east_position = { 0, 0 },
 --          south_position = { 0, 0.25 },
@@ -1461,7 +1461,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 30,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -44),
                 hr_version =
@@ -1472,7 +1472,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 42,
                   height = 58,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-1, -44),
                   scale = 0.5,
@@ -1493,32 +1493,32 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           {
             layers =
             {
-              electric_mining_drill_animation(name),
-              electric_mining_drill_shadow_animation(name)
+              dustless_electric_mining_drill_animation(name),
+              dustless_electric_mining_drill_shadow_animation(name)
             }
           },
           east_animation =
           {
             layers =
             {
-              electric_mining_drill_horizontal_animation(name),
-              electric_mining_drill_horizontal_shadow_animation(name)
+              dustless_electric_mining_drill_horizontal_animation(name),
+              dustless_electric_mining_drill_horizontal_shadow_animation(name)
             }
           },
           south_animation =
           {
             layers =
             {
-              electric_mining_drill_animation(name),
-              electric_mining_drill_shadow_animation(name)
+              dustless_electric_mining_drill_animation(name),
+              dustless_electric_mining_drill_shadow_animation(name)
             }
           },
           west_animation =
           {
             layers =
             {
-              electric_mining_drill_horizontal_animation(name),
-              electric_mining_drill_horizontal_shadow_animation(name)
+              dustless_electric_mining_drill_horizontal_animation(name),
+              dustless_electric_mining_drill_horizontal_shadow_animation(name)
             }
           },
         },
@@ -1529,7 +1529,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
 --          synced_fadeout = true,
 --          align_to_waypoint = true,
 --          apply_tint = "resource-color",
---          animation = electric_mining_drill_smoke_front(name),
+--          animation = dustless_electric_mining_drill_smoke_front(name),
 --        },
 
         -- dust animation directional 2
@@ -1549,7 +1549,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 28,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(24, -12),
                 hr_version =
@@ -1560,7 +1560,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 46,
                   height = 56,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(24, -12),
                   scale = 0.5,
@@ -1579,7 +1579,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 24,
                 height = 18,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, 20),
                 hr_version =
@@ -1590,7 +1590,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 48,
                   height = 36,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-2, 20),
                   scale = 0.5,
@@ -1609,7 +1609,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 26,
                 height = 30,
                 frame_count = 10,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-26, -12),
                 hr_version =
@@ -1620,7 +1620,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 46,
                   height = 54,
                   frame_count = 10,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-25, -11),
                   scale = 0.5,
@@ -1647,7 +1647,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1658,7 +1658,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 22,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1677,7 +1677,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 16,
                 height = 12,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -44),
                 hr_version =
@@ -1688,7 +1688,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 30,
                   height = 20,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-2, -43),
                   scale = 0.5,
@@ -1707,7 +1707,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1718,7 +1718,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 22,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1746,7 +1746,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1757,7 +1757,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 22,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1776,7 +1776,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 14,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -42),
                 hr_version =
@@ -1787,7 +1787,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 28,
                   height = 18,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-2, -43),
                   scale = 0.5,
@@ -1806,7 +1806,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1817,7 +1817,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 22,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1845,7 +1845,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1856,7 +1856,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 24,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1875,7 +1875,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 14,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-2, -42),
                 hr_version =
@@ -1886,7 +1886,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 26,
                   height = 16,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-2, -42),
                   scale = 0.5,
@@ -1905,7 +1905,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 12,
                 height = 8,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -52),
                 hr_version =
@@ -1916,7 +1916,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 24,
                   height = 14,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -52),
                   scale = 0.5,
@@ -1931,9 +1931,9 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           animated_shift = true,
           always_draw = true,
           --north_animation = util.empty_sprite(),
-          east_animation = electric_mining_drill_horizontal_front_animation(name),
+          east_animation = dustless_electric_mining_drill_horizontal_front_animation(name),
           --south_animation = util.empty_sprite(),
-          west_animation = electric_mining_drill_horizontal_front_animation(name),
+          west_animation = dustless_electric_mining_drill_horizontal_front_animation(name),
         },
 
         -- fluid window background (front)
@@ -1950,7 +1950,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 86,
                 height = 44,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, 10),
                 hr_version =
@@ -1961,7 +1961,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 172,
                   height = 90,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, 9),
                   scale = 0.5,
@@ -1980,7 +1980,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(14, 10),
                 hr_version =
@@ -1991,7 +1991,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 80,
                   height = 106,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(14, 10),
                   scale = 0.5,
@@ -2010,7 +2010,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 86,
                 height = 14,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -8),
                 hr_version =
@@ -2021,7 +2021,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 172,
                   height = 22,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -7),
                   scale = 0.5,
@@ -2040,7 +2040,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-14, 10),
                 hr_version =
@@ -2051,7 +2051,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 82,
                   height = 110,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-15, 9),
                   scale = 0.5,
@@ -2076,7 +2076,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 90,
                 height = 46,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, 10),
                 hr_version =
@@ -2087,7 +2087,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 178,
                   height = 94,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, 9),
                   scale = 0.5,
@@ -2106,7 +2106,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(14, 10),
                 hr_version =
@@ -2117,7 +2117,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 80,
                   height = 102,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(14, 11),
                   scale = 0.5,
@@ -2136,7 +2136,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 90,
                 height = 16,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -8),
                 hr_version =
@@ -2147,7 +2147,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 178,
                   height = 28,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -7),
                   scale = 0.5,
@@ -2166,7 +2166,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-14, 10),
                 hr_version =
@@ -2177,7 +2177,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 82,
                   height = 106,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-15, 10),
                   scale = 0.5,
@@ -2202,7 +2202,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 86,
                 height = 44,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, 10),
                 hr_version =
@@ -2213,7 +2213,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 172,
                   height = 88,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, 10),
                   scale = 0.5,
@@ -2232,7 +2232,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 50,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(14, 12),
                 hr_version =
@@ -2243,7 +2243,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 78,
                   height = 102,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(14, 11),
                   scale = 0.5,
@@ -2262,7 +2262,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 86,
                 height = 12,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, -8),
                 hr_version =
@@ -2273,7 +2273,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 172,
                   height = 22,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, -8),
                   scale = 0.5,
@@ -2292,7 +2292,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 40,
                 height = 54,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-14, 10),
                 hr_version =
@@ -2303,7 +2303,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 78,
                   height = 106,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-14, 10),
                   scale = 0.5,
@@ -2327,7 +2327,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 100,
                 height = 66,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(0, 16),
                 hr_version =
@@ -2338,7 +2338,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 200,
                   height = 130,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(0, 16),
                   scale = 0.5,
@@ -2357,7 +2357,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 104,
                 height = 72,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(-4, 12),
                 hr_version =
@@ -2368,7 +2368,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 208,
                   height = 144,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(-4, 12),
                   scale = 0.5,
@@ -2387,7 +2387,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 44,
                 height = 28,
                 frame_count = 5,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 shift = util.by_pixel(-2, 34),
                 hr_version =
                 {
@@ -2397,7 +2397,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 84,
                   height = 56,
                   frame_count = 5,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   shift = util.by_pixel(-1, 34),
                   scale = 0.5,
                 }
@@ -2409,7 +2409,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 96,
                 height = 70,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 repeat_count = 5,
                 shift = util.by_pixel(0, 18),
                 hr_version =
@@ -2420,7 +2420,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 192,
                   height = 140,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   repeat_count = 5,
                   shift = util.by_pixel(0, 18),
                   scale = 0.5,
@@ -2439,7 +2439,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                 width = 106,
                 height = 76,
                 frame_count = 1,
-                animation_speed = electric_drill_animation_speed,
+                animation_speed = dustless_electric_drill_animation_speed,
                 direction_count = 1,
                 shift = util.by_pixel(2, 10),
                 hr_version =
@@ -2450,7 +2450,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
                   width = 208,
                   height = 148,
                   frame_count = 1,
-                  animation_speed = electric_drill_animation_speed,
+                  animation_speed = dustless_electric_drill_animation_speed,
                   direction_count = 1,
                   shift = util.by_pixel(3, 11),
                   scale = 0.5,
@@ -2461,7 +2461,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         },
 
         -- LEDs
-        electric_mining_drill_status_leds_working_visualisation(name),
+        dustless_electric_mining_drill_status_leds_working_visualisation(name),
 
         -- light
         electric_mining_drill_primary_light,
@@ -2479,7 +2479,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         width = 110,
         height = 108,
         frame_count = 1,
-        animation_speed = electric_drill_animation_speed,
+        animation_speed = dustless_electric_drill_animation_speed,
         direction_count = 1,
         shift = util.by_pixel(-2, 2),
         repeat_count = 5,
@@ -2491,7 +2491,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           width = 216,
           height = 218,
           frame_count = 1,
-          animation_speed = electric_drill_animation_speed,
+          animation_speed = dustless_electric_drill_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(-1, 1),
           repeat_count = 5,
@@ -2506,7 +2506,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         width = 116,
         height = 108,
         frame_count = 1,
-        animation_speed = electric_drill_animation_speed,
+        animation_speed = dustless_electric_drill_animation_speed,
         direction_count = 1,
         shift = util.by_pixel(4, 2),
         repeat_count = 5,
@@ -2518,7 +2518,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           width = 236,
           height = 214,
           frame_count = 1,
-          animation_speed = electric_drill_animation_speed,
+          animation_speed = dustless_electric_drill_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(3, 2),
           repeat_count = 5,
@@ -2533,7 +2533,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         width = 108,
         height = 114,
         frame_count = 1,
-        animation_speed = electric_drill_animation_speed,
+        animation_speed = dustless_electric_drill_animation_speed,
         direction_count = 1,
         shift = util.by_pixel(0, 4),
         repeat_count = 5,
@@ -2545,7 +2545,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           width = 214,
           height = 230,
           frame_count = 1,
-          animation_speed = electric_drill_animation_speed,
+          animation_speed = dustless_electric_drill_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(0, 3),
           repeat_count = 5,
@@ -2560,7 +2560,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
         width = 118,
         height = 106,
         frame_count = 1,
-        animation_speed = electric_drill_animation_speed,
+        animation_speed = dustless_electric_drill_animation_speed,
         direction_count = 1,
         shift = util.by_pixel(-4, 2),
         repeat_count = 5,
@@ -2572,7 +2572,7 @@ function makeDrill(name, health, mining_speed, energy_usage, pollution, volume)
           width = 234,
           height = 214,
           frame_count = 1,
-          animation_speed = electric_drill_animation_speed,
+          animation_speed = dustless_electric_drill_animation_speed,
           direction_count = 1,
           shift = util.by_pixel(-4, 1),
           repeat_count = 5,

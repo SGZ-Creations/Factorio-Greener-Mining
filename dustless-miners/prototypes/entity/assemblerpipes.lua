@@ -1,4 +1,4 @@
-function assembler2pipepictures()
+function dustless_assembler2pipepictures()
   return
   {
     north =

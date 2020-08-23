@@ -1,4 +1,4 @@
-pipecoverspictures = function()
+dustless_pipecoverspictures = function()
   return
   {
     north =
