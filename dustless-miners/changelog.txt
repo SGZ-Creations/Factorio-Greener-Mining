@@ -1,21 +1,20 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: 2020.08.24
+Date: 2020.08.29
   Major Features:
-    - Added functionality that miners produce a fluid called dust clouds (that is coming out from the back)
+    - Added functionality that miners produce a fluid called "<ore-name> dust cloud" (that is coming out from the back)
   Features:
-    - Added a command handler for "/dustlessminers".
-    - First argument can be either 'info' or 'reset' the second requires that you are admin on the server/map (The 'reset' command does not actually reset it is meant repairs broken data)
+    - Added a command handler for "/dustlessminers". First argument can be either 'info' or 'reset' the second requires that you are admin on the server/map (The 'reset' command does not actually reset anything as it is meant to repair broken mod data)
     - Added dust clouds which are created by the miners when operating (map settings included :D)
-    - Added dust which can be made from dust clouds and water in a chemical plant
+    - Added dust which can be made from dust cloud and water in a chemical plant
     - Added functionality to duplicate recipes from ores to use the dust counterpart instead
   Graphics:
     - Changed the default textures to always use the wet variants for the miners
   Changes:
-    - Changed T1 Miner Technology to require Oil Processing in stead of Fluid Handling now that chemical plants are required to utilize the miner
+    - Changed T1 Miner Technology to require Oil Processing instead of Fluid Handling now that chemical plants are required to utilize the mining drills
   Optimisations:
     - The mod only updates a certain number of miners (setting key: "dustless-miners-per-tick" in map) every mod update (setting key: "dustless-tickspeed" in map)
-    - Removed un-neaded textures to minimize the required space now down to sub 5 MB
+    - Removed unused textures to minimize the required space, which is now down to sub 5 MB
   Bugfixes:
     - Removed a line in the changelog that caused factorio to not like it :,(
 ---------------------------------------------------------------------------------------------------

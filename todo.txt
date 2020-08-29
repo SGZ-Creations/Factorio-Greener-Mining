@@ -1,3 +1,6 @@
+Todo for 0.3.0:
+	- Currently EMPTY!!!
+
 Todo for 0.2.0:
 	X Make sure that when an entity is built it will be added to be updated
 	X Remove textutils.lua
@@ -5,5 +8,5 @@ Todo for 0.2.0:
 	X Revamp dust cloud icon
 	X Update thumbnail.png to use the new textures
 	X Update description
-	/ Update gallery on mods.factorio.com/mod/dustless-miners
-	/ Update description on mods.factorio.com/mod/dustless-miners
+	X Update gallery on mods.factorio.com/mod/dustless-miners
+	X Update description on mods.factorio.com/mod/dustless-miners
