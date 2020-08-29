@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2020.08.24
+  Major Features:
+    - Added functionality that miners produce a fluid called dust clouds (that is coming out from the back)
+  Features:
+    - Added a command handler for "/dustlessminers".
+    - First argument can be either 'info' or 'reset' the second requires that you are admin on the server/map (The 'reset' command does not actually reset it is meant repairs broken data)
+    - Added dust clouds which are created by the miners when operating (map settings included :D)
+    - Added dust which can be made from dust clouds and water in a chemical plant
+    - Added functionality to duplicate recipes from ores to use the dust counterpart instead
+  Graphics:
+    - Changed the default textures to always use the wet variants for the miners
+  Changes:
+    - Changed T1 Miner Technology to require Oil Processing in stead of Fluid Handling now that chemical plants are required to utilize the miner
+  Optimisations:
+    - The mod only updates a certain number of miners (setting key: "dustless-miners-per-tick" in map) every mod update (setting key: "dustless-tickspeed" in map)
+    - Removed un-neaded textures to minimize the required space now down to sub 5 MB
+  Bugfixes:
+    - Removed a line in the changelog that caused factorio to not like it :,(
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2020.08.23
   Changes:
@@ -16,4 +36,3 @@ Date: 2020.08.23
     - Added a tier 3 dustless mining drill which has 750 health, mining speed of 2.0/s, power usage of 260kW, pollution per minute of 0
     - Added a tier 4 dustless mining drill which has 1000 health, mining speed of 4.0/s, power usage of 430kW, pollution per minute of 0
     - Added a tier 5 dustless mining drill which has 1400 health, mining speed of 8.0/s, power usage of 670kW, pollution per minute of 0
----------------------------------------------------------------------------------------------------
