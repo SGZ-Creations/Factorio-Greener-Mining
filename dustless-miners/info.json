@@ -1,6 +1,6 @@
 {
 	"name": "dustless-miners",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"title": "Dustless Miners",
 	"description": "This mod features five extra tiers of electric miners which have reduced pollution production, but outputs a new fluid called \"<ore-name> dust cloud\" which can be turned into an item called \"<ore-name> dust\" and that can be used as a regular ore, but recipes that require the ore take 5 times as much dust as the ore variant.\n\n You produce the dust in a chemical plant with water and dust cloud.\n\n The mod has a few settings for each miner: mining speed, power usage, pollution, health and dust cloud production, the first 5 are startup settings whilst the last is a map setting, there's also two more map settings which define the speed at which a miner gets updated (Leave them default if you don't want lag)",
 	"author": "MarcaGames",

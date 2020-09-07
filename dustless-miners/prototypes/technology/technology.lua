@@ -20,7 +20,7 @@ data:extend({
 			},
 			time = 10
 		},
-		prerequisites = { "oil-processing" },
+		prerequisites = { "dustless-dustcloud-dust" },
 		order = "c-b[dustless-electric-mining-drill-1]"
 	},
 	{

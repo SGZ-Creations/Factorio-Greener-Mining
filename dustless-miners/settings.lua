@@ -1,5 +1,13 @@
 data:extend({
 	{
+		type = "int-setting",
+		name = "dustless-dust-to-ore-ratio",
+		setting_type = "startup",
+		minimum_value = 1,
+		default_value = 5,
+		order = "b-a[dust-to-ore]"
+	},
+	{
 		type = "double-setting",
 		name = "dustless-t1-mining-speed",
 		setting_type = "startup",

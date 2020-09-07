@@ -1,21 +1,17 @@
-local currentHandlingVersion = 1
-
-local nthTickRate = settings.global["dustless-tickspeed"].value
-local deltaNthTick = nthTickRate / 60.0
-local minersPerTick = settings.global["dustless-miners-per-tick"].value
-local t1DustProductionPerSecond = settings.global["dustless-t1-dust-cloud-production-per-second"].value * deltaNthTick
-local t2DustProductionPerSecond = settings.global["dustless-t2-dust-cloud-production-per-second"].value * deltaNthTick
-local t3DustProductionPerSecond = settings.global["dustless-t3-dust-cloud-production-per-second"].value * deltaNthTick
-local t4DustProductionPerSecond = settings.global["dustless-t4-dust-cloud-production-per-second"].value * deltaNthTick
-local t5DustProductionPerSecond = settings.global["dustless-t5-dust-cloud-production-per-second"].value * deltaNthTick
-
 local function setupModMapData()
-	global.dustlessMiners = {
-		handlingVersion = 1,
-		currentMiner = 1,
-		minersProcessedLastTick = 0,
-		miners = {}
-	}
+	global.dustlessMiners = {}
+	global.dustlessMiners.nthTickRate = settings.global["dustless-tickspeed"].value
+	global.dustlessMiners.deltaNthTick = global.dustlessMiners.nthTickRate / 60.0
+	global.dustlessMiners.minersPerTick = settings.global["dustless-miners-per-tick"].value
+	global.dustlessMiners.t1DustProductionPerSecond = settings.global["dustless-t1-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
+	global.dustlessMiners.t2DustProductionPerSecond = settings.global["dustless-t2-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
+	global.dustlessMiners.t3DustProductionPerSecond = settings.global["dustless-t3-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
+	global.dustlessMiners.t4DustProductionPerSecond = settings.global["dustless-t4-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
+	global.dustlessMiners.t5DustProductionPerSecond = settings.global["dustless-t5-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
+	global.dustlessMiners.handlingVersion = 2
+	global.dustlessMiners.currentMiner = 1
+	global.dustlessMiners.minersProcessedLastTick = 0
+	global.dustlessMiners.miners = {}
 
 	for k, surface in pairs(game.surfaces) do
 		for i = 1, 5, 1 do
@@ -35,9 +31,9 @@ end
 local function checkIfModGood()
 	if global.dustlessMiners == nil then
 		setupModMapData()
-	elseif global.dustlessMiners.handlingVersion or 0 < currentHandlingVersion then
+	elseif global.dustlessMiners.handlingVersion or 0 < 1 then
 		updateToNewerVersion()
-	elseif global.dustlessMiners.handlingVersion or 0 > currentHandlingVersion then
+	elseif global.dustlessMiners.handlingVersion or 0 > 1 then
 		error("Trying to run on an older version of miner handling which is illegal and causes unknown issues!", 0)
 	end
 end
@@ -48,27 +44,27 @@ local function getMinerDustCloudFluid(miner, tier, deltaTick)
 		if tier == 1 then
 			return {
 				name = miningTarget.name .. "-dustcloud",
-				amount = t1DustProductionPerSecond * deltaTick
+				amount = global.dustlessMiners.t1DustProductionPerSecond * deltaTick
 			}
 		elseif tier == 2 then
 			return {
 				name = miningTarget.name .. "-dustcloud",
-				amount = t2DustProductionPerSecond * deltaTick
+				amount = global.dustlessMiners.t2DustProductionPerSecond * deltaTick
 			}
 		elseif tier == 3 then
 			return {
 				name = miningTarget.name .. "-dustcloud",
-				amount = t3DustProductionPerSecond * deltaTick
+				amount = global.dustlessMiners.t3DustProductionPerSecond * deltaTick
 			}
 		elseif tier == 4 then
 			return {
 				name = miningTarget.name .. "-dustcloud",
-				amount = t4DustProductionPerSecond * deltaTick
+				amount = global.dustlessMiners.t4DustProductionPerSecond * deltaTick
 			}
 		elseif tier == 5 then
 			return {
 				name = miningTarget.name .. "-dustcloud",
-				amount = t5DustProductionPerSecond * deltaTick
+				amount = global.dustlessMiners.t5DustProductionPerSecond * deltaTick
 			}
 		end
 	end
@@ -86,15 +82,24 @@ local function processMiner(miner, tier, deltaTick)
 	end
 end
 
-local firstTick = true
-
 local function processMiners()
-	if firstTick then
-		checkIfModGood()
-		firstTick = false
+	if not global.dustlessMiners then
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Im happy to see you're using Dustless Miners, to get some information from the mod run the command '/dustlessminers info'")
+	elseif global.dustlessMiners.handlingVersion < 2 then
+		local previousHandling = global.dustlessMiners.handlingVersion
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Migrated Dustless Miners from handling version: " .. previousHandling .. " to " .. global.dustlessMiners.handlingVersion)
+	elseif global.dustlessMiners.handlingVersion > 2 then
+		local previousHandling = global.dustlessMiners.handlingVersion
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Migrated Dustless Miners from handling version: " .. previousHandling .. " to " .. global.dustlessMiners.handlingVersion .. ". Disclaimer: migration to older version might cause unexcepted issues!")
 	end
 	
-	local minersToTick = math.min(#global.dustlessMiners.miners, minersPerTick)
+	local minersToTick = math.min(#global.dustlessMiners.miners, global.dustlessMiners.minersPerTick)
 	local deltaTick = math.floor(#global.dustlessMiners.miners / minersToTick)
 	global.dustlessMiners.minersProcessedLastTick = 0
 	for i = 1, minersToTick, 1 do
@@ -113,9 +118,20 @@ local function processMiners()
 end
 
 local function builtEntity(entity)
-	if firstTick then
-		checkIfModGood()
-		firstTick = false
+	if not global.dustlessMiners then
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Im happy to see you're using Dustless Miners, to get some information from the mod run the command '/dustlessminers info'")
+	elseif global.dustlessMiners.handlingVersion < 2 then
+		local previousHandling = global.dustlessMiners.handlingVersion
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Migrated Dustless Miners from handling version: " .. previousHandling .. " to " .. global.dustlessMiners.handlingVersion)
+	elseif global.dustlessMiners.handlingVersion > 2 then
+		local previousHandling = global.dustlessMiners.handlingVersion
+		global.dustlessMiners = nil
+		setupModMapData();
+		game.print("Migrated Dustless Miners from handling version: " .. previousHandling .. " to " .. global.dustlessMiners.handlingVersion .. ". Disclaimer: migration to older version might cause unexcepted issues!")
 	end
 
 	if not entity then
@@ -137,22 +153,22 @@ end
 
 local function onRuntimeModSettingChanged(playerIndex, setting, settingType)
 	if setting == "dustless-tickspeed" then
-		script.on_nth_tick(nthTickRate, nil)
-		nthTickRate = settings.global["dustless-tickspeed"].value
-		deltaNthTick = nthTickRate / 60.0
-		script.on_nth_tick(nthTickRate, function() processMiners() end)
+		script.on_nth_tick(global.dustlessMiners.nthTickRate, nil)
+		global.dustlessMiners.nthTickRate = settings.global["dustless-tickspeed"].value
+		global.dustlessMiners.deltaNthTick = global.dustlessMiners.nthTickRate / 60.0
+		script.on_nth_tick(global.dustlessMiners.nthTickRate, function() processMiners() end)
 	elseif setting == "dustless-miners-per-tick" then
-		minersPerTick = settings.global["dustless-miners-per-tick"].value
+		global.dustlessMiners.minersPerTick = settings.global["dustless-miners-per-tick"].value
 	elseif setting == "dustless-t1-dust-cloud-production-per-second" then
-		t1DustProductionPerSecond = settings.global["dustless-t1-dust-cloud-production-per-second"].value * deltaNthTick
+		global.dustlessMiners.t1DustProductionPerSecond = settings.global["dustless-t1-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
 	elseif setting == "dustless-t2-dust-cloud-production-per-second" then
-		t2DustProductionPerSecond = settings.global["dustless-t2-dust-cloud-production-per-second"].value * deltaNthTick
+		global.dustlessMiners.t2DustProductionPerSecond = settings.global["dustless-t2-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
 	elseif setting == "dustless-t3-dust-cloud-production-per-second" then
-		t3DustProductionPerSecond = settings.global["dustless-t3-dust-cloud-production-per-second"].value * deltaNthTick
+		global.dustlessMiners.t3DustProductionPerSecond = settings.global["dustless-t3-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
 	elseif setting == "dustless-t4-dust-cloud-production-per-second" then
-		t4DustProductionPerSecond = settings.global["dustless-t4-dust-cloud-production-per-second"].value * deltaNthTick
+		global.dustlessMiners.t4DustProductionPerSecond = settings.global["dustless-t4-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
 	elseif setting == "dustless-t5-dust-cloud-production-per-second" then
-		t5DustProductionPerSecond = settings.global["dustless-t5-dust-cloud-production-per-second"].value * deltaNthTick
+		global.dustlessMiners.t5DustProductionPerSecond = settings.global["dustless-t5-dust-cloud-production-per-second"].value * global.dustlessMiners.deltaNthTick
 	end
 end
 
@@ -170,17 +186,17 @@ local function dustlessMinersInfo(commandData)
 		else
 			table.insert(messages, "  - Number of miners: 0")
 		end
-		table.insert(messages, "  - Update speed: " .. nthTickRate)
+		table.insert(messages, "  - Update speed: " .. global.dustlessMiners.nthTickRate)
 		if global.dustlessMiners.minersProcessedLastTick then
-			table.insert(messages, "  - Processed " .. global.dustlessMiners.minersProcessedLastTick .. "/" .. minersPerTick .. " miners last tick")
+			table.insert(messages, "  - Processed " .. global.dustlessMiners.minersProcessedLastTick .. "/" .. global.dustlessMiners.minersPerTick .. " miners last tick")
 		else
-			table.insert(messages, "  - Processed 0/" .. minersPerTick .. " miners last tick")
+			table.insert(messages, "  - Processed 0/" .. global.dustlessMiners.minersPerTick .. " miners last tick")
 		end
 	else
 		table.insert(messages, "  - Handling version: Not Defined")
 		table.insert(messages, "  - Number of miners: 0")
-		table.insert(messages, "  - Update speed: " .. nthTickRate)
-		table.insert(messages, "  - Processed 0/" .. minersPerTick .. " miners last tick")
+		table.insert(messages, "  - Update speed: " .. global.dustlessMiners.nthTickRate)
+		table.insert(messages, "  - Processed 0/" .. global.dustlessMiners.minersPerTick .. " miners last tick")
 	end
 
 	if commandData.player_index then
@@ -256,7 +272,7 @@ script.on_event(defines.events.script_raised_revive, function(event) builtEntity
 script.on_event(defines.events.on_runtime_mod_setting_changed, function(event) onRuntimeModSettingChanged(event.player_index, event.setting, event.setting_type) end)
 
 -- Register tick event
-script.on_nth_tick(nthTickRate, function() processMiners() end)
+script.on_nth_tick(settings.global["dustless-tickspeed"].value, function() processMiners() end)
 
 -- Add console commands
 -- commands.add_command("dustlessminers", "Gets info about the dustless miners mod!", function(commandData) dustlessMinersInfo(commandData) end)

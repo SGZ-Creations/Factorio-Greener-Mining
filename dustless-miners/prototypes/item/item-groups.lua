@@ -11,5 +11,11 @@ data:extend({
 		name = "base-dust",
 		group = "dusts",
 		order = "a"
+	},
+	{
+		type = "item-subgroup",
+		name = "dust-to-ore",
+		group = "dusts",
+		order = "b"
 	}
 })

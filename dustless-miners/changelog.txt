@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2020.09.07
+  Features:
+    - Added a new setting which allows setting the amount of dust required per ore in the duplicate recipes
+    - Added new recipes to convert the dust into ore using a chemical plant
+    - Added technologies to unlock the dustcloud to dust and dust to ore recipes
+  Changes:
+    - Changed dustcloud order from 'b[dust]-a[<dust-cloud-name>]' to 'z[dust]-a[<dust-cloud-name>]' so the dust clouds are most likely at bottom
+  Bugfixes:
+    - Fixed a multiplayer desync issue where some variables where slightly different
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2020.08.29
   Major Features:
