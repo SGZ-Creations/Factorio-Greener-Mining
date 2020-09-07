@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2020.09.07
+  Changes:
+    - Changed the way dustcloud and dust are automatically being made at data stage where it copies data from the ore to get fuel values and such
+  Bugfixes:
+    - Fixed an issue where resources with multiple results would fail with 'Unknown fluid name: <resource-name>-dustcloud'
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2020.09.07
   Features:

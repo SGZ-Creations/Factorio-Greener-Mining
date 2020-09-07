@@ -1,3 +1,5 @@
+local deepcopy = require("scripts.deepcopy")
+
 local dust = {
 	DUST_PER_ORE = 1,
 	fluids = {},
@@ -10,7 +12,21 @@ local dust = {
 local items = data.raw["item"]
 local resources = data.raw["resource"]
 
-function dust.makeDustCloud(name, localised_name, color)
+local function getFuelAmount(fuel_value, divisor)
+	if not fuel_value then
+		return nil
+	end
+
+	local strLen = string.len(fuel_value)
+	local fuelString = strLen - 2
+
+	local number = tonumber(string.sub(fuel_value, 0, fuelString))
+	local joulesStr = string.sub(fuel_value, fuelString, strLen)
+
+	return (number / divisor) .. joulesStr
+end
+
+function dust.makeDustCloud(name, localised_name, color, ore)
 	return
 		{
 			type = "fluid",
@@ -28,27 +44,46 @@ function dust.makeDustCloud(name, localised_name, color)
 					tint = color
 				}
 			},
+			fuel_value = getFuelAmount(ore.fuel_value, dust.DUST_PER_ORE * 50),
+			emissions_multiplier = ore.fuel_emissions_multiplier,
+			gas_temperature = 250,
 			order = "z[dust]-a[" .. name .. "]"
 		}
 end
 
-function dust.makeDust(name, localised_name, color, stack_size)
-	return
+function dust.makeDust(name, localised_name, color, ore)
+	local dustItem = deepcopy.deepcopy(ore)
+	dustItem.name = name
+	dustItem.localised_name = localised_name
+	dustItem.icons = {
 		{
-			type = "item",
-			name = name,
-			localised_name = localised_name,
-			icons = {
-				{
-					icon = "__dustless-miners__/graphics/icons/dust.png",
-					icon_size = 128, icon_mipmaps = 2,
-					tint = color
-				}
-			},
-			subgroup = "base-dust",
-			order = "a[" .. name .. "]",
-			stack_size = stack_size
+			icon = "__dustless-miners__/graphics/icons/dust.png",
+			icon_size = 128, icon_mipmaps = 2,
+			tint = color
 		}
+	}
+	dustItem.subgroup = "base-dust"
+	dustItem.order = "a[" .. name .. "]"
+	dustItem.stack_size = dustItem.stack_size * dust.DUST_PER_ORE
+	if dustItem.fuel_acceleration_multiplier then
+		dustItem.fuel_acceleration_multiplier = dustItem.fuel_acceleration_multiplier / dust.DUST_PER_ORE
+	end
+	dustItem.fuel_value = getFuelAmount(dustItem.fuel_value, dust.DUST_PER_ORE)
+	if dustItem.fuel_top_speed_multiplier then
+		dustItem.fuel_top_speed_multiplier = dustItem.fuel_top_speed_multiplier / dust.DUST_PER_ORE
+	end
+	if dustItem.fuel_emissions_multiplier then
+		dustItem.fuel_emissions_multiplier = dustItem.fuel_emissions_multiplier / dust.DUST_PER_ORE
+	end
+	dustItem.icon = nil
+	dustItem.icon_size = nil
+	dustItem.icon_mipmaps = nil
+	dustItem.dark_background_icon = nil
+	dustItem.pictures = nil
+	dustItem.place_as_tile = nil
+	dustItem.place_result = nil
+	dustItem.placed_as_equipment_result = nil
+	return dustItem
 end
 
 function dust.makeDustCloudToDustRecipe(name, dustCloud, dust, color)
@@ -80,7 +115,7 @@ function dust.makeDustsForModpack()
 		if v.type and v.type == "resource" and (v.category == nil or v.category == "basic-solid") and v.minable and (v.minable.result or (v.minable.results and #v.minable.results > 0)) then
 			local oreName = v.minable.result or v.minable.results[1].name
 			local oreColor = v.mining_visualisation_tint or v.map_color
-			local oreStackSize = items[oreName].stack_size
+			local oreItem = items[oreName]
 
 			local prettyName = string.gsub(oreName, "-", " ")
 			prettyName = string.upper(string.sub(prettyName, 1, 1)) .. string.sub(prettyName, 2, string.len(prettyName))
@@ -89,8 +124,8 @@ function dust.makeDustsForModpack()
 			local dustCloudName = oreName .. "-dustcloud"
 			local dustName = oreName .. "-dust"
 
-			table.insert(dust.fluids, dust.makeDustCloud(dustCloudName, dustCloudPrettyName, oreColor))
-			table.insert(dust.items, dust.makeDust(dustName, dustPrettyName, oreColor, oreStackSize * dust.DUST_PER_ORE))
+			table.insert(dust.fluids, dust.makeDustCloud(dustCloudName, dustCloudPrettyName, oreColor, oreItem))
+			table.insert(dust.items, dust.makeDust(dustName, dustPrettyName, oreColor, oreItem))
 
 			-- Dust Clouds to Dust in Chemical Plant
 			table.insert(dust.recipes, dust.makeDustCloudToDustRecipe(dustName, dustCloudName, dustName, oreColor))

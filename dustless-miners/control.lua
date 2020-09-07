@@ -40,32 +40,35 @@ end
 
 local function getMinerDustCloudFluid(miner, tier, deltaTick)
 	local miningTarget = miner.mining_target
-	if miningTarget then
-		if tier == 1 then
-			return {
-				name = miningTarget.name .. "-dustcloud",
-				amount = global.dustlessMiners.t1DustProductionPerSecond * deltaTick
-			}
-		elseif tier == 2 then
-			return {
-				name = miningTarget.name .. "-dustcloud",
-				amount = global.dustlessMiners.t2DustProductionPerSecond * deltaTick
-			}
-		elseif tier == 3 then
-			return {
-				name = miningTarget.name .. "-dustcloud",
-				amount = global.dustlessMiners.t3DustProductionPerSecond * deltaTick
-			}
-		elseif tier == 4 then
-			return {
-				name = miningTarget.name .. "-dustcloud",
-				amount = global.dustlessMiners.t4DustProductionPerSecond * deltaTick
-			}
-		elseif tier == 5 then
-			return {
-				name = miningTarget.name .. "-dustcloud",
-				amount = global.dustlessMiners.t5DustProductionPerSecond * deltaTick
-			}
+	if miningTarget and miningTarget.prototype and miningTarget.prototype.mineable_properties and miningTarget.prototype.mineable_properties.products then
+		local dustcloudName = miningTarget.prototype.mineable_properties.products[1].name
+		if dustcloudName then
+			if tier == 1 then
+				return {
+					name = dustcloudName .. "-dustcloud",
+					amount = global.dustlessMiners.t1DustProductionPerSecond * deltaTick
+				}
+			elseif tier == 2 then
+				return {
+					name = dustcloudName .. "-dustcloud",
+					amount = global.dustlessMiners.t2DustProductionPerSecond * deltaTick
+				}
+			elseif tier == 3 then
+				return {
+					name = dustcloudName .. "-dustcloud",
+					amount = global.dustlessMiners.t3DustProductionPerSecond * deltaTick
+				}
+			elseif tier == 4 then
+				return {
+					name = dustcloudName .. "-dustcloud",
+					amount = global.dustlessMiners.t4DustProductionPerSecond * deltaTick
+				}
+			elseif tier == 5 then
+				return {
+					name = dustcloudName .. "-dustcloud",
+					amount = global.dustlessMiners.t5DustProductionPerSecond * deltaTick
+				}
+			end
 		end
 	end
 	return nil
@@ -98,7 +101,7 @@ local function processMiners()
 		setupModMapData();
 		game.print("Migrated Dustless Miners from handling version: " .. previousHandling .. " to " .. global.dustlessMiners.handlingVersion .. ". Disclaimer: migration to older version might cause unexcepted issues!")
 	end
-	
+
 	local minersToTick = math.min(#global.dustlessMiners.miners, global.dustlessMiners.minersPerTick)
 	local deltaTick = math.floor(#global.dustlessMiners.miners / minersToTick)
 	global.dustlessMiners.minersProcessedLastTick = 0
