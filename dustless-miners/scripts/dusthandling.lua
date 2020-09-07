@@ -1,4 +1,3 @@
-local textutils = require("scripts.textutils")
 local deepcopy = require("scripts.deepcopy")
 local dusthandling = {
 	DUST_PER_ORE = 1,
