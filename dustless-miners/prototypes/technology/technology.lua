@@ -37,10 +37,10 @@ data:extend({
 			}
 		},
 		unit = {
-			count = 60,
+			count = 125,
 			ingredients = {
-				{ "automation-science-pack", 2 },
-				{ "logistic-science-pack", 2 },
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
 				{ "chemical-science-pack", 1 }
 			},
 			time = 20
@@ -62,11 +62,12 @@ data:extend({
 			}
 		},
 		unit = {
-			count = 120,
+			count = 200,
 			ingredients = {
-				{ "automation-science-pack", 2 },
-				{ "logistic-science-pack", 2 },
-				{ "chemical-science-pack", 1 }
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "production-science-pack", 1 }
 			},
 			time = 30
 		},
@@ -91,9 +92,11 @@ data:extend({
 			ingredients = {
 				{ "automation-science-pack", 2 },
 				{ "logistic-science-pack", 2 },
-				{ "chemical-science-pack", 1 }
+				{ "chemical-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 }
 			},
-			time = 40
+			time = 30
 		},
 		prerequisites = { "dustless-electric-mining-drill-3", "advanced-electronics-2" },
 		order = "c-b[dustless-electric-mining-drill-4]"
@@ -112,13 +115,16 @@ data:extend({
 			}
 		},
 		unit = {
-			count = 400,
+			count = 300,
 			ingredients = {
 				{ "automation-science-pack", 2 },
 				{ "logistic-science-pack", 2 },
-				{ "chemical-science-pack", 1 }
+				{ "chemical-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+				{ "space-science-pack", 1 }
 			},
-			time = 50
+			time = 30
 		},
 		prerequisites = { "dustless-electric-mining-drill-4" },
 		order = "c-b[dustless-electric-mining-drill-5]"

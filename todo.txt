@@ -1,6 +1,12 @@
 Todo for 0.3.0:
 	- Add compatabilities with a few mods (bobs is one).
 	
+Todo for 0.2.4:
+	- Factoio compadebility for 1.1.x
+	
+Todo for 0.2.3:
+    - Reaveled on/in changelog.
+
 Todo for 0.2.2:
 	X Fix #2 unknown fluid name issue.
 	X Change the way dustcloud and dust are automatically being made at data stage as to where it copies data from the ore to get fuel values and such
