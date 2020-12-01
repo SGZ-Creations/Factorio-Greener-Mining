@@ -244,7 +244,7 @@ function dusthandling.makeDustToOreRecipe(prettyName, dust, ore, color)
 			energy_required = 8,
 			ingredients = {
 				{ type = "item", name = dust, amount = dusthandling.DUST_PER_ORE },
-				{ type = "fluid", name = "sulfuric-acid", amount = 30 }
+				{ type = "fluid", name = "water", amount = 100 }
 			},
 			subgroup = "dust-to-ore",
 			order = "a[" .. dust .. "-" .. ore .. "]",

@@ -12,7 +12,7 @@ data:extend({
 		name = "dustless-t1-mining-speed",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 0.6,
+		default_value = 1.5,
 		order = "b-t1-1"
 	},
 	{
@@ -20,7 +20,7 @@ data:extend({
 		name = "dustless-t1-power",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 130,
+		default_value = 500,
 		order = "b-t1-2"
 	},
 	{
@@ -36,7 +36,7 @@ data:extend({
 		name = "dustless-t1-pollution",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 4,
+		default_value = 3,
 		order = "b-t1-4"
 	},
 	{
@@ -44,7 +44,7 @@ data:extend({
 		name = "dustless-t2-mining-speed",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 1.4,
+		default_value = 3,
 		order = "b-t2-1"
 	},
 	{
@@ -52,7 +52,7 @@ data:extend({
 		name = "dustless-t2-power",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 180,
+		default_value = 700,
 		order = "b-t2-2"
 	},
 	{
@@ -84,7 +84,7 @@ data:extend({
 		name = "dustless-t3-power",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 260,
+		default_value = 900,
 		order = "b-t3-2"
 	},
 	{
@@ -100,7 +100,7 @@ data:extend({
 		name = "dustless-t3-pollution",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 0,
+		default_value = 1,
 		order = "b-t3-4"
 	},
 	{
@@ -108,7 +108,7 @@ data:extend({
 		name = "dustless-t4-mining-speed",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 4.0,
+		default_value = 6.0,
 		order = "b-t4-1"
 	},
 	{
@@ -116,7 +116,7 @@ data:extend({
 		name = "dustless-t4-power",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 430,
+		default_value = 1100,
 		order = "b-t4-2"
 	},
 	{
@@ -132,7 +132,7 @@ data:extend({
 		name = "dustless-t4-pollution",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 0,
+		default_value = 0.5,
 		order = "b-t4-4"
 	},
 	{
@@ -148,7 +148,7 @@ data:extend({
 		name = "dustless-t5-power",
 		setting_type = "startup",
 		minimum_value = 0,
-		default_value = 670,
+		default_value = 1300,
 		order = "b-t5-2"
 	},
 	{
