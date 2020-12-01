@@ -2,13 +2,14 @@
 Version: 0.2.3
 Date: 1.12.20 
   Changes:
-   - Changed date formate.
-   - Name changed from dustless-miner to polutionless-miners more name changing later. might keep old name in some areas or all. Hope not :p
-   - Recipes don't use pumps anymore, since it was anoying to lose all pumps from inventory while hand crafting. Genaral recipe changes for the miners is made to make it more smooth trough the game. Changes might still happen.
-   recipies might be a bit more exspensive, due to removal of other ingridiends. Later on am also planing to do bob's compatibility.
-   - Dust to ore, recipie now uses water instead of sulfuric-acid. To male it a bit easier to convert to ore, since you already can put the dust in a furnaces anyway. Also to help big modded games.
-   - Changed some default startup setting. again to try smooth the miner unlock more out. If u play with default settings.
-   - chnaged some science requrements for t3-t5: t3 now needs production Science. t4 Now need Production & Uillity Science. t5 now needs Production, Utillity & Space science
+    - Changed date format
+    - Name changed from dustless-miner to greener-miners.
+      - might keep old name in some areas or all. Hope not :p (currently settings need updates)
+    - Recipes don't use pumps anymore, since it was anoying to lose all pumps from inventory while hand crafting. Genaral recipe changes for the miners is made to make it more smooth trough the game. Changes might still happen.
+      recipies might be a bit more expensive, due to removal of other ingridiends. Later on am also planing to do bob's compatibility.
+    - Dust to ore, recipe now uses water instead of sulfuric-acid. To male it a bit easier to convert to ore, since you already can put the dust in a furnaces anyway. Also to help big modded games.
+    - Changed some default startup setting. again to try smooth the miner unlock more out. If u play with default settings.
+    - Changed some science requirements for t3-t5: t3 now needs production Science. t4 Now need Production & Uillity Science. t5 now needs Production, Utility & Space science
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 2020.09.07

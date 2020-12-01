@@ -265,7 +265,7 @@ function dusthandling.makeDustToOreRecipes(dusts)
 		type = "technology",
 		name = "dustless-dust-ore",
 		icon_size = 128,
-		icon = "__dustless-miners__/graphics/icons/dust-to-ore.png",
+		icon = "__greener-miners__/graphics/icons/dust-to-ore.png",
 		effects = {},
 		unit = {
 			count = 140,
