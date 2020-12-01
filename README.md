@@ -1,2 +1,2 @@
-# Factorio Dustless Miners
-A factorio mod that adds miners whose purpose is to reduce pollution
+# Factorio Greener Mining
+A mod for Factoio that adds 5 new tiers of greener mining.
