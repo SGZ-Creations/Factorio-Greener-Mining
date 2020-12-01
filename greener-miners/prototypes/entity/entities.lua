@@ -1,8 +1,8 @@
-require ("__base__.prototypes.entity.demo-pipecovers")
+require ("__base__.prototypes.entity.pipecovers")
 require ("__base__.prototypes.entity.assemblerpipes")
 
-local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
-local sounds = require("__base__.prototypes.entity.demo-sounds")
+local hit_effects = require ("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 local electric_drill_animation_speed = 0.4
 local electric_drill_animation_sequence =
@@ -358,7 +358,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 		{
 			type = "mining-drill",
 			name = name,
-			icon = "__dustless-miners__/graphics/icons/" .. name .. ".png",
+			icon = "__greener-miners__/graphics/icons/" .. name .. ".png",
 			icon_size = 64, icon_mipmaps = 4,
 			flags = {"placeable-neutral", "player-creation"},
 			minable = {mining_time = 0.3, result = name},
@@ -397,7 +397,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 			{
 				sound =
 				{
-					filename = "__dustless-miners__/sound/" .. name .. ".ogg",
+					filename = "__greener-miners__/sound/" .. name .. ".ogg",
 					volume = volume
 				},
 				audible_distance_modifier = 0.6,
@@ -499,7 +499,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							},
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-N-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-N-wet.png",
 								line_length = 1,
 								width = 96,
 								height = 100,
@@ -511,7 +511,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-N-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-N-wet.png",
 									line_length = 1,
 									width = 190,
 									height = 198,
@@ -617,7 +617,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							},
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet.png",
 								line_length = 1,
 								width = 96,
 								height = 106,
@@ -629,7 +629,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet.png",
 									line_length = 1,
 									width = 194,
 									height = 208,
@@ -865,7 +865,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							},
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet.png",
 								line_length = 1,
 								width = 98,
 								height = 106,
@@ -877,7 +877,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet.png",
 									line_length = 1,
 									width = 194,
 									height = 208,
@@ -1859,7 +1859,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet-front.png",
 									line_length = 1,
 									width = 104,
 									height = 72,
@@ -1870,7 +1870,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet-front.png",
 										line_length = 1,
 										width = 208,
 										height = 144,
@@ -1889,7 +1889,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-output.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-output.png",
 									line_length = 5,
 									width = 44,
 									height = 28,
@@ -1899,7 +1899,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-output.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-output.png",
 										line_length = 5,
 										width = 84,
 										height = 56,
@@ -1911,7 +1911,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								},
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-wet-front.png",
 									line_length = 1,
 									width = 96,
 									height = 70,
@@ -1922,7 +1922,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-wet-front.png",
 										line_length = 1,
 										width = 192,
 										height = 140,
@@ -1941,7 +1941,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet-front.png",
 									line_length = 1,
 									width = 106,
 									height = 76,
@@ -1952,7 +1952,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet-front.png",
 										line_length = 1,
 										width = 208,
 										height = 148,
@@ -1996,7 +1996,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 						{
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-N-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-N-wet.png",
 								line_length = 1,
 								width = 96,
 								height = 100,
@@ -2008,7 +2008,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-N-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-N-wet.png",
 									line_length = 1,
 									width = 190,
 									height = 198,
@@ -2078,7 +2078,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 						{
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet.png",
 								line_length = 1,
 								width = 96,
 								height = 106,
@@ -2090,7 +2090,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet.png",
 									line_length = 1,
 									width = 194,
 									height = 208,
@@ -2218,7 +2218,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 						{
 							{
 								priority = "high",
-								filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet.png",
+								filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet.png",
 								line_length = 1,
 								width = 98,
 								height = 106,
@@ -2230,7 +2230,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								hr_version =
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet.png",
 									line_length = 1,
 									width = 194,
 									height = 208,
@@ -3212,7 +3212,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-W-wet-front.png",
 									line_length = 1,
 									width = 104,
 									height = 72,
@@ -3223,7 +3223,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-W-wet-front.png",
 										line_length = 1,
 										width = 208,
 										height = 144,
@@ -3242,7 +3242,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-output.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-output.png",
 									line_length = 5,
 									width = 44,
 									height = 28,
@@ -3252,7 +3252,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-output.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-output.png",
 										line_length = 5,
 										width = 84,
 										height = 56,
@@ -3264,7 +3264,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 								},
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-S-wet-front.png",
 									line_length = 1,
 									width = 96,
 									height = 70,
@@ -3275,7 +3275,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-S-wet-front.png",
 										line_length = 1,
 										width = 192,
 										height = 140,
@@ -3294,7 +3294,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 							{
 								{
 									priority = "high",
-									filename = "__dustless-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet-front.png",
+									filename = "__greener-miners__/graphics/entity/" .. name .. "/" .. name .. "-E-wet-front.png",
 									line_length = 1,
 									width = 106,
 									height = 76,
@@ -3305,7 +3305,7 @@ local function makeDrill(name, health, mining_speed, energy_usage, pollution, vo
 									hr_version =
 									{
 										priority = "high",
-										filename = "__dustless-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet-front.png",
+										filename = "__greener-miners__/graphics/entity/" .. name .. "/hr-" .. name .. "-E-wet-front.png",
 										line_length = 1,
 										width = 208,
 										height = 148,

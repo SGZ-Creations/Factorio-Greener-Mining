@@ -39,7 +39,7 @@ function dust.makeDustCloud(name, localised_name, color, ore)
 			heat_capacity = "0.2KJ",
 			icons = {
 				{
-					icon = "__dustless-miners__/graphics/icons/dust-cloud.png",
+					icon = "__greener-miners__/graphics/icons/dust-cloud.png",
 					icon_size = 128, icon_mipmaps = 2,
 					tint = color
 				}
@@ -57,7 +57,7 @@ function dust.makeDust(name, localised_name, color, ore)
 	dustItem.localised_name = localised_name
 	dustItem.icons = {
 		{
-			icon = "__dustless-miners__/graphics/icons/dust.png",
+			icon = "__greener-miners__/graphics/icons/dust.png",
 			icon_size = 128, icon_mipmaps = 2,
 			tint = color
 		}
@@ -138,7 +138,7 @@ function dust.makeDustsForModpack()
 		type = "technology",
 		name = "dustless-dustcloud-dust",
 		icon_size = 128,
-		icon = "__dustless-miners__/graphics/icons/dustcloud-to-dust.png",
+		icon = "__greener-miners__/graphics/icons/dustcloud-to-dust.png",
 		effects = {},
 		unit = {
 			count = 50,
