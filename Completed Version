@@ -1,0 +1,22 @@
+Todo for 0.2.2:
+	X Fix #2 unknown fluid name issue.
+	X Change the way dustcloud and dust are automatically being made at data stage as to where it copies data from the ore to get fuel values and such
+
+Todo for 0.2.1:
+	X Fix #1 multiplayer desync.
+	X Add dust to ore recipes.
+	X Add technologies to lock the dustcloud to dust and dust to ore recipes
+	X Revamp dust icon to be 128x128 by default with a 64x64 mipmap
+	X Create dustcloud to dust icon
+	X Create dust to ore icon
+	X Fix issue where the dust variants of recipes are required for other recipes (alter the order to be before the original recipe)
+
+Todo for 0.2.0:
+	X Make sure that when an entity is built it will be added to be updated
+	X Remove textutils.lua
+	X Add locale for the new settings
+	X Revamp dust cloud icon
+	X Update thumbnail.png to use the new textures
+	X Update description
+	X Update gallery on mods.factorio.com/mod/dustless-miners
+	X Update description on mods.factorio.com/mod/dustless-miners
