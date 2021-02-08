@@ -1,7 +1,7 @@
-Todo for 0.3.2:
+Todo for 0.4.1:
 	- Add compatabilities with a few mods (bobs is one).
 	
-Todo for 0.3.1:
+Todo for 0.4.0:
 	- Factoio compadebility for 1.1.x
 	
 Todo for 0.3.0:
