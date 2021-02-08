@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.2.3
-Date: 1.12.20 
+Version: 0.3.0
+Date: 08.02.2021 
   Changes:
     - Changed date format.
     - Name changed from dustless-miner to Greener-Miners.
-      - might keep old name in some areas or all. Hope not :p (currently settings need updates)
+		- might keep old name in some areas or all. Hope not :p (currently settings need updates)
     - Recipes don't use pumps anymore, since it was anoying to lose all pumps from inventory while hand crafting. Genaral recipe changes for the miners is made to make it more smooth trough the game. Changes might still happen.
       recipies might be a bit more expensive, due to removal of other ingridiends. Later on am also planing to do bob's compatibility.
     - Dust to ore, recipe now uses water instead of sulfuric-acid. To make it a bit easier to convert to ore, since you already can put the dust in a furnaces anyway. Also to helps big modded games.
